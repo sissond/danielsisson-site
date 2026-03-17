@@ -150,6 +150,10 @@ h1 {
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
+.hero-body {
+  margin-top: 1.25rem;
+}
+
 .hero-media {
   display: flex;
   justify-content: flex-end;
@@ -204,6 +208,10 @@ h1 {
   gap: 1rem;
 }
 
+.role-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .card {
   padding: 1.25rem;
   border: 1px solid var(--border);
@@ -226,6 +234,16 @@ h1 {
 
 .contact-section {
   padding-bottom: 2rem;
+}
+
+.topic-list {
+  margin-top: 1.25rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
 }
 
 .contact-link {
@@ -264,6 +282,10 @@ h1 {
   }
 
   .card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .role-list {
     grid-template-columns: 1fr;
   }
 }
