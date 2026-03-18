@@ -274,6 +274,124 @@ h1 {
   color: var(--muted);
 }
 
+.writing-section {
+  position: relative;
+}
+
+.writing-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.9fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.writing-main,
+.subscribe-panel {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.4rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(12px);
+}
+
+.writing-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.writing-copy {
+  margin-top: 1.1rem;
+}
+
+.writing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.subscribe-button {
+  margin-top: 0;
+}
+
+.publication-card,
+.subscribe-panel {
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.publication-card {
+  margin-top: 2.5rem;
+  padding: 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  background:
+    linear-gradient(180deg, rgba(139, 92, 246, 0.12), rgba(139, 92, 246, 0.02)),
+    rgba(255, 255, 255, 0.02);
+}
+
+.publication-card h3,
+.subscribe-panel h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.publication-card .body-copy,
+.subscribe-panel .body-copy {
+  max-width: 27rem;
+}
+
+.writing-topics {
+  margin-top: 2rem;
+}
+
+.writing-subheading {
+  margin: 0 0 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.03em;
+}
+
+.subscribe-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.subscribe-panel .section-label {
+  margin-bottom: 0.9rem;
+}
+
+.subscribe-panel .body-copy {
+  margin-top: 0.9rem;
+}
+
+.subscribe-embed-frame {
+  margin-top: 1.35rem;
+  padding: 0.8rem;
+  border-radius: 1.1rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.subscribe-embed-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+  background: #ffffff;
+}
+
+.subscribe-link {
+  margin-top: 1.2rem;
+}
+
 .contact-section {
   padding-bottom: 2rem;
 }
@@ -334,6 +452,14 @@ h1 {
   .role-list {
     grid-template-columns: 1fr;
   }
+
+  .writing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe-panel {
+    height: auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -355,6 +481,19 @@ h1 {
     width: 16rem;
     height: 16rem;
     filter: blur(18px);
+  }
+
+  .writing-main,
+  .subscribe-panel {
+    padding: 1.1rem;
+  }
+
+  .writing-title {
+    max-width: none;
+  }
+
+  .subscribe-embed-frame {
+    padding: 0.45rem;
   }
 }
 
